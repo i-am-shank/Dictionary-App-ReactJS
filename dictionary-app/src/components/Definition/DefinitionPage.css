@@ -1,0 +1,21 @@
+.word-stack {
+    @apply mt-6 px-8 py-10 rounded-2xl items-center justify-between text-white;
+    background: linear-gradient(90.17deg, #191e5d 0.14%, #0f133a 98.58%);
+    box-shadow: 0px 10px 20px rgba(19, 23, 71, 0.25);
+}
+
+.play-btn:hover {
+    @apply text-red-300 border-[0.5px] border-solid border-red-200;
+}
+
+.definition-word {
+    @apply capitalize;
+}
+
+.icon {
+    @apply text-black;
+}
+
+.back-btn {
+    @apply capitalize mt-4;
+}

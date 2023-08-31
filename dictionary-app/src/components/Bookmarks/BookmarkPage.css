@@ -1,0 +1,12 @@
+.bookmark-heading {
+    @apply mb-6;
+}
+
+.bookmark-box {
+    @apply p-4 cursor-pointer bg-white rounded-lg capitalize mb-4 font-semibold block text-black;
+    text-decoration: none;
+}
+
+.bookmark-box:hover {
+    @apply underline;
+}

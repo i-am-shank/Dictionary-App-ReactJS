@@ -1,0 +1,3 @@
+.word-link:hover {
+    @apply underline;
+}

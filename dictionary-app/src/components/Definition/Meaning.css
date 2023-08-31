@@ -1,0 +1,8 @@
+.meaning-box {
+    box-shadow: "0px 10px 25px rgba(0,0,0, 0.05)";
+    @apply bg-[#fff] p-4 rounded-2xl mt-6;
+}
+
+.pos {
+    @apply capitalize;
+}
