@@ -29,6 +29,8 @@ import { Fragment, useEffect, useState } from "react";
 
 import Meaning from "./Meaning";
 import SimilarWords from "./SimilarWords";
+import titles from "../../titles";
+import { Helmet } from "react-helmet";
 
 export default function DefinitionPage({
     bookmarks,
@@ -103,6 +105,7 @@ export default function DefinitionPage({
     // The fetchData function is called only for 1st render.
     useEffect(() => {
         setResultExist(true);
+        window.scrollTo(0, 0);
         setLoading(true);
         if (isBookmarked === false) {
             // word is not bookmarked, only then we need to search fetch the data
@@ -129,7 +132,12 @@ export default function DefinitionPage({
         if (resultExist !== true) {
             return (
                 <Box sx={{ ...theme.mixins.alignInCenter }}>
-                    <Typography>Word not found</Typography>
+                    <Helmet>
+                        <title>{titles.ErrorPage}</title>
+                    </Helmet>
+                    <Typography className="error-msg" sx={{ mb: 1 }}>
+                        Word not found
+                    </Typography>
                     <Button
                         variant="contained"
                         className="back-btn"
@@ -144,6 +152,11 @@ export default function DefinitionPage({
         } else {
             return (
                 <div className="definition-wrapper">
+                    <Helmet>
+                        <title>{`${word[0].toUpperCase()}${word.slice(
+                            1
+                        )} (meaning)`}</title>
+                    </Helmet>
                     <Stack
                         className="icon-stack"
                         direction="row"
@@ -210,6 +223,19 @@ export default function DefinitionPage({
                                             <Divider sx={{ my: 3 }} />
                                         )}
                                     </span>
+                                    <span>
+                                        {def.phonetic !== "" && (
+                                            <Box className="meaning-box">
+                                                <Typography
+                                                    variant="subtitle1"
+                                                    className="phonetic"
+                                                >
+                                                    {def.phonetic}
+                                                </Typography>
+                                            </Box>
+                                        )}
+                                    </span>
+
                                     <span>
                                         {def.meanings.map((meaning, idx) => {
                                             return (

@@ -1,6 +1,22 @@
 .word-stack {
     @apply mt-6 px-8 py-10 rounded-2xl items-center justify-between text-white;
-    background: linear-gradient(90.17deg, #191e5d 0.14%, #0f133a 98.58%);
+    /* background: linear-gradient(90.17deg, #191e5d 0.14%, #0f133a 98.58%); */
+    /* background: linear-gradient(
+        90deg,
+        rgba(0, 106, 255, 1) 0%,
+        rgba(0, 188, 212, 1) 100%,
+        rgba(238, 130, 238, 1) 100%
+    ); */
+    /* background: linear-gradient(
+        90deg,
+        rgba(0, 106, 255, 1) 0%,
+        rgba(130, 149, 238, 0.95) 100%
+    ); */
+    background: linear-gradient(
+        90deg,
+        rgba(0, 88, 212, 0.66) 0%,
+        rgba(104, 117, 220, 0.8) 88%
+    );
     box-shadow: 0px 10px 20px rgba(19, 23, 71, 0.25);
 }
 
@@ -16,6 +32,10 @@
     @apply text-black;
 }
 
-.back-btn {
-    @apply capitalize mt-4;
+.definition-wrapper {
+    @apply mb-6;
+}
+
+.phonetic {
+    @apply text-blue-400;
 }

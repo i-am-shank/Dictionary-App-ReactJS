@@ -3,7 +3,12 @@
 }
 
 .bookmark-box {
-    @apply p-4 cursor-pointer bg-white rounded-lg capitalize mb-4 font-semibold block text-black;
+    @apply p-4 cursor-pointer rounded-lg capitalize mb-4 font-semibold block text-white;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 88, 212, 0.66) 0%,
+        rgba(104, 117, 220, 0.8) 88%
+    );
     text-decoration: none;
 }
 

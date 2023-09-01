@@ -11,9 +11,12 @@ import { Search, Bookmark } from "@mui/icons-material";
 
 import dictimage from "../../assets/book.png";
 
+import titles from "../../titles";
+
 // Hooks ===================================
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 export default function HomePage() {
     const navigate = useNavigate();
@@ -75,6 +78,9 @@ export default function HomePage() {
 
     return (
         <Box className="box">
+            <Helmet>
+                <title>{titles.HomePage}</title>
+            </Helmet>
             <img src={dictimage} alt="ABC" />
             <Typography className="main-heading" variant="h4" color="primary">
                 Dictionary
@@ -84,7 +90,7 @@ export default function HomePage() {
             </Typography>
 
             <Box className="input-box">
-                <form onSubmit={submitHandler}>
+                <form onSubmit={submitHandler} className="home-form">
                     <FilledInput
                         value={word}
                         onChange={changeHandler}
@@ -99,13 +105,16 @@ export default function HomePage() {
                         startAdornment={<Search className="search-icon" />}
                         fullWidth
                     />
+                    <button type="submit" className="search-btn">
+                        Search
+                    </button>
                 </form>
             </Box>
 
             <IconButton
                 className="bookmark-btn"
                 sx={{
-                    backgroundColor: "lightpink",
+                    backgroundColor: "lightBlue",
                     borderRadius: 2,
                     p: 2,
                     color: "#fff",
