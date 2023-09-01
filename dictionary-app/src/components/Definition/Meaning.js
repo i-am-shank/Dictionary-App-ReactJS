@@ -28,6 +28,11 @@ export default function Meaning(props) {
                                     {meaning.definitions.length > 1 &&
                                         `${index + 1}. `}
                                     {def.definition}
+                                    <span className="example">
+                                        {Object.keys(def).includes("example") &&
+                                            def.example !== "" &&
+                                            ` Example : ${def.example}`}
+                                    </span>
                                 </Typography>
                             );
                         })}

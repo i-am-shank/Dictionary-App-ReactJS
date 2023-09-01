@@ -12,3 +12,7 @@
 .pos {
     @apply capitalize;
 }
+
+.example {
+    @apply italic text-gray-500 tracking-wider;
+}

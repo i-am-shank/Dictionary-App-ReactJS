@@ -224,16 +224,19 @@ export default function DefinitionPage({
                                         )}
                                     </span>
                                     <span>
-                                        {def.phonetic !== "" && (
-                                            <Box className="meaning-box">
-                                                <Typography
-                                                    variant="subtitle1"
-                                                    className="phonetic"
-                                                >
-                                                    {def.phonetic}
-                                                </Typography>
-                                            </Box>
-                                        )}
+                                        {Object.keys(def).includes(
+                                            "phonetic"
+                                        ) &&
+                                            def.phonetic !== "" && (
+                                                <Box className="meaning-box">
+                                                    <Typography
+                                                        variant="subtitle1"
+                                                        className="phonetic"
+                                                    >
+                                                        {def.phonetic}
+                                                    </Typography>
+                                                </Box>
+                                            )}
                                     </span>
 
                                     <span>
