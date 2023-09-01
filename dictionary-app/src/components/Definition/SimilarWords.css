@@ -1,3 +1,7 @@
 .word-link:hover {
     @apply underline;
 }
+
+.part-of-speech {
+    @apply italic font-normal;
+}

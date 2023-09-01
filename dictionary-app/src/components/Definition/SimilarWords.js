@@ -2,11 +2,13 @@ import { Typography, Box } from "@mui/material";
 import "./SimilarWords.css";
 import { NavLink } from "react-router-dom";
 
-export default function SimilarWords({ isSame, words }) {
+export default function SimilarWords({ isSame, words, pos }) {
     return (
         <Box className="meaning-box">
             <Typography color="GrayText" variant="subtitle1" className="pos">
-                {isSame === true ? `Synonyms : ` : `Antonyms : `}
+                {isSame === true ? `Synonyms ` : `Antonyms `}
+                <span className="part-of-speech">{`(${pos}) `}</span>
+                {`:`}
             </Typography>
             <Typography
                 color="GrayText"

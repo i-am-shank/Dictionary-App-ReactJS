@@ -252,6 +252,9 @@ export default function DefinitionPage({
                                                                 words={
                                                                     meaning.synonyms
                                                                 }
+                                                                pos={
+                                                                    meaning.partOfSpeech
+                                                                }
                                                             />
                                                         )}
                                                     </p>
@@ -262,6 +265,9 @@ export default function DefinitionPage({
                                                                 isSame={false}
                                                                 words={
                                                                     meaning.antonyms
+                                                                }
+                                                                pos={
+                                                                    meaning.partOfSpeech
                                                                 }
                                                             />
                                                         )}
